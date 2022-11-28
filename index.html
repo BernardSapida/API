@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>API</title>
+</head>
+<body>
+    <div class="mx-auto my-5 card" style="width: 60rem;">
+        <div class="card-header"><h4>My Form</h4></div>
+        <div class="card-body">
+          <form action="">
+            <p><strong>Method:</strong></p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="method" id="GET" value="GET">
+                <label class="form-check-label" for="GET">GET</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="method" id="POST" value="POST">
+                <label class="form-check-label" for="POST">POST</label>
+            </div>
+            <hr>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="adjective" id="The" value="The">
+                <label class="form-check-label" for="The">The</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="adjective" id="Happy" value="Happy">
+                <label class="form-check-label" for="Happy">Happy</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="adjective" id="Sad" value="Sad">
+                <label class="form-check-label" for="Sad">Sad</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="adjective" id="Lazy" value="Lazy">
+                <label class="form-check-label" for="Lazy">Lazy</label>
+            </div>
+            <hr>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="animal" id="Cat" value="Cat">
+                <label class="form-check-label" for="Cat">Cat</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="animal" id="Dog" value="Dog">
+                <label class="form-check-label" for="Dog">Dog</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="animal" id="Fox" value="Fox">
+                <label class="form-check-label" for="Fox">Fox</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="animal" id="Bear" value="Bear">
+                <label class="form-check-label" for="Bear">Bear</label>
+            </div>
+        </form>
+          
+        </div>
+        <div class="card-footer text-muted">
+            <a href="#" class="btn btn-primary" onclick="processData()">Perform Operation</a>
+        </div>
+    </div>
+    <div class="mx-auto my-5 card" style="width: 60rem;">
+        <div class="card-header"><h4>Output</h4></div>
+            <div class="card-body">
+                <p id="output1"></p>
+                <p id="output2"></p>
+                <p id="output3"></p>
+                <p id="output4"></p>
+            </div>
+        </div>
+    </div>
+    <script src="api.js"></script>
+</body>
+</html>
