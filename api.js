@@ -22,10 +22,8 @@ async function getData() {
     let text = await response.text();
     let index = Math.floor(Math.random()*100);
 
-    document.getElementById("output1").innerHTML = "<strong>User ID</strong>: " + JSON.parse(text)[index].userId;
-    document.getElementById("output2").innerHTML = "<strong>ID</strong>: " + JSON.parse(text)[index].id;
-    document.getElementById("output3").innerHTML = "<strong>Title</strong>: " + JSON.parse(text)[index].title;
-    document.getElementById("output4").innerHTML = "<strong>Body</strong>: " + JSON.parse(text)[index].body;
+    document.getElementById("output1").innerHTML = "<strong>Title</strong>: " + JSON.parse(text)[index].title;
+    document.getElementById("output2").innerHTML = "<strong>Body</strong>: " + JSON.parse(text)[index].body;
 }
 
 async function processData() {
