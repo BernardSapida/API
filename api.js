@@ -10,7 +10,6 @@ async function postData(selectedAdjective, selectedAnimal) {
         })
     });
     let text = await response.text();
-    console.log(text)
 
     document.getElementById("output1").innerHTML = "<strong>Title</strong>: " + JSON.parse(text).adjective + " " + JSON.parse(text).animal;
     document.getElementById("output2").innerHTML = "";
