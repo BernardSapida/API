@@ -1,4 +1,4 @@
-async function postData(selectedMethod, selectedAdjective, selectedAnimal) {
+async function postData(selectedAdjective, selectedAnimal) {
     let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
         method: "POST",
         headers: {
@@ -10,11 +10,10 @@ async function postData(selectedMethod, selectedAdjective, selectedAnimal) {
         })
     });
     let text = await response.text();
+    console.log(text)
 
     document.getElementById("output1").innerHTML = "<strong>Title</strong>: " + JSON.parse(text).adjective + " " + JSON.parse(text).animal;
     document.getElementById("output2").innerHTML = "";
-    document.getElementById("output3").innerHTML = "";
-    document.getElementById("output4").innerHTML = "";
 }
 
 async function getData() {
@@ -22,7 +21,7 @@ async function getData() {
     let text = await response.text();
     let index = Math.floor(Math.random()*100);
 
-    document.getElementById("output1").innerHTML = "<strong>Title</strong>: " + JSON.parse(text)[index].title;
+    document.getElementById("output1").innerHTML = "<strong>Title</strong>: " + JSON.parse(text)[2].title;
     document.getElementById("output2").innerHTML = "<strong>Body</strong>: " + JSON.parse(text)[index].body;
 }
 
@@ -43,6 +42,6 @@ async function processData() {
         if(animal.checked) selectedAnimal = animal.value
     });
 
-    if(selectedMethod == "POST") await postData(selectedMethod, selectedAdjective, selectedAnimal);
+    if(selectedMethod == "POST") await postData(selectedAdjective, selectedAnimal);
     else await getData();
 }
