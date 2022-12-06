@@ -26,7 +26,7 @@ async function getData() {
     let index = Math.floor(Math.random()*100);
     let obj = JSON.parse(stringObject);
 
-    document.getElementById("result_1").innerHTML = "<strong>Title</strong>: " + obj[2].title;
+    document.getElementById("result_1").innerHTML = "<strong>Title</strong>: " + obj[index].title;
     document.getElementById("result_2").innerHTML = "<strong>Body</strong>: " + obj[index].body;
 }
 
