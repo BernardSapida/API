@@ -20,7 +20,7 @@ async function getData() {
     let text = await response.text();
     let index = Math.floor(Math.random()*100);
 
-    document.getElementById("output1").innerHTML = "<strong>Title</strong>: " + JSON.parse(text)[2].title;
+    document.getElementById("output1").innerHTML = "<strong>Title</strong>: " + JSON.parse(text)[index].title;
     document.getElementById("output2").innerHTML = "<strong>Body</strong>: " + JSON.parse(text)[index].body;
 }
 
